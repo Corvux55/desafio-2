@@ -5,9 +5,13 @@ CONFIG -= qt
 
 SOURCES += \
         Fecha.cpp \
+        album.cpp \
         foto.cpp \
-        main.cpp
+        main.cpp \
+        mensaje.cpp
 
 HEADERS += \
     Fecha.h \
-    foto.h
+    album.h \
+    foto.h \
+    mensaje.h
