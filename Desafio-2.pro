@@ -8,10 +8,12 @@ SOURCES += \
         album.cpp \
         foto.cpp \
         main.cpp \
-        mensaje.cpp
+        mensaje.cpp \
+        usuario.cpp
 
 HEADERS += \
     Fecha.h \
     album.h \
     foto.h \
-    mensaje.h
+    mensaje.h \
+    usuario.h
