@@ -21,12 +21,12 @@ private:
 
     mensaje* mensajesEnviados;
     int cantidadMensajesEnviados;
-    int capacidadMEnsajesEnviados;
+    int capacidadMensajesEnviados;
     mensaje* mensajesRecibidos;
     int cantidadMensajesRecibidos;
     int capacidadMensajesRecibidos;
 
-    char** solicidudesRecibidas; //nombres usuarios
+    char** solicitudesRecibidas; //nombres usuarios
     int cantidadSolicitudes;
     int capacidadSolicitudes;
 
@@ -36,11 +36,49 @@ private:
 
     void redimensionarAmigos();
     void redimensionarMensajesEnviados();
-    void redimensionarMensajesRecibidis();
-    void redimensionaeSolicitudes();
+    void redimensionarMensajesRecibidos();
+    void redimensionarSolicitudes();
     void redimensionarAlbumes();
 public:
+    usuario();
+    usuario(const char* nom, const Fecha& fn, const char* cor, const char* fp, const char* con, const char* ciu,const char* pai, const Fecha& fi);
+    usuario(const usuario& otro);
+    ~usuario();
 
+    char* obtenerNombre() const;
+    Fecha obtenerFechaNacimiento() const;
+    char* obtenerCorreo() const;
+    char* obtenerFotoPerfil() const;
+    char* obtenerContraseña() const;
+    char* obtenerCiudad() const;
+    char* obtenerPais() const;
+    Fecha obtenerFechaInscripcion() const;
+
+    int obtenerCantidadAmigos() const;
+    int obtenerCantidadMensajesEnviados() const;
+    int obtenerCantidadMensajesRecibidos() const;
+    int obtenerCantidadSolicitudes() const;
+    int obtenerCantidadAlbumes() const;
+
+    void agregarAmigo(usuario* u);
+    bool esAmigo(usuario* u) const;
+    usuario* obtenerAmigo(int indice) const;
+
+    void agregarMensajeEnviado(const mensaje& m);
+    void agregarMensajeRecibido(const mensaje& m);
+    mensaje* obtenerMensajeEnviado(int indice) const;
+    mensaje* obtenerMensajeRecibido(int indice) const;
+
+    void agregarSolicitud(const char* nombreEmisor);
+    char* obtenerSolicitud(int indice) const;
+    void eliminarSolicitud(int indice);
+
+    void agregarAlbum(const album& a);
+    album* obtenerAlbum(int indice) const;
+    album* buscarAlbum(const char* nombre) const;
+
+    void mostrarAmigos() const;
+    void mostrarAlbumes() const;
 };
 
 #endif // USUARIO_H
