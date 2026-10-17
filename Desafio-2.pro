@@ -5,6 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
         Fecha.cpp \
+        RedSocial.cpp \
         album.cpp \
         foto.cpp \
         main.cpp \
@@ -13,6 +14,7 @@ SOURCES += \
 
 HEADERS += \
     Fecha.h \
+    RedSocial.h \
     album.h \
     foto.h \
     mensaje.h \
